@@ -291,9 +291,9 @@ class TestEmployee:
         review2 = Review.create(2023, "Great Python coding skills", employee1.id)
         review3 = Review.create(2022, "Good SQL coding skills", employee2.id)
         
-        reviews = employee1.reviews()
-        assert (len(reviews) == 2)
-        assert ((reviews[0].id, reviews[0].year, reviews[0].summary, reviews[0].employee_id) ==
+        Reviews = employee1.reviews()
+        assert (len(Reviews) == 2)
+        assert ((Reviews[0].id, Reviews[0].year, Reviews[0].summary, Reviews[0].employee_id) ==
                 (review1.id, review1.year, review1.summary, review1.employee_id))
-        assert ((reviews[1].id, reviews[1].year, reviews[1].summary, reviews[1].employee_id) ==
+        assert ((Reviews[1].id, Reviews[1].year, Reviews[1].summary, Reviews[1].employee_id) ==
                 (review2.id, review2.year, review2.summary, review2.employee_id))
